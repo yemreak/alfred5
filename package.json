@@ -1,0 +1,27 @@
+{
+	"name": "@yemreak/alfred5",
+	"version": "0.1.0",
+	"description": "Alfred5 workflow utility for typescript projects",
+	"main": "out/index.js",
+	"types": "out/index.d.ts",
+	"scripts": {
+		"build": "tsc",
+		"test": "jest"
+	},
+	"keywords": [
+		"alfred5",
+		"alfred5-workflow"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/yemreak/alfred5.git"
+	},
+	"author": "yemreak",
+	"license": "ISC",
+	"devDependencies": {
+		"@types/jest": "^29.5.12",
+		"jest": "^29.7.0",
+		"ts-jest": "^29.1.2",
+		"typescript": "^5.4.5"
+	}
+}

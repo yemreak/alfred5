@@ -1,0 +1,14 @@
+{
+	"include": ["src/**/*.ts"],
+	"compilerOptions": {
+		"outDir": "out",
+		"target": "ESNext",
+		"module": "CommonJS",
+		"esModuleInterop": true,
+		"strict": true,
+		"sourceMap": true,
+		"declaration": true,
+		"forceConsistentCasingInFileNames": true
+	},
+	"exclude": ["node_modules", "dist"]
+}
