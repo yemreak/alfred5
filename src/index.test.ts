@@ -1,5 +1,5 @@
 import { exit } from "process"
-import { response, type AlfredResult } from ".."
+import { response, type AlfredResult } from "."
 
 jest.mock("process", () => ({
 	exit: jest.fn(),

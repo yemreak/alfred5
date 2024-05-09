@@ -1,12 +1,40 @@
 {
 	"name": "@yemreak/alfred5",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "Alfred5 workflow utility for typescript projects",
-	"main": "out/index.js",
-	"types": "out/index.d.ts",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"type": "module",
 	"scripts": {
-		"build": "tsc",
-		"test": "jest"
+		"start": "tsc --project tsconfig.json && node dist/index.js",
+		"build": "tsc --project tsconfig.json",
+		"test": "node --experimental-vm-modules ./node_modules/.bin/jest",
+		"prepublishOnly": "npm run build"
+	},
+	"files": [
+		"dist/**/*"
+	],
+	"publishConfig": {
+		"access": "public"
+	},
+	"jest": {
+		"preset": "ts-jest",
+		"testEnvironment": "node",
+		"silent": true,
+		"extensionsToTreatAsEsm": [
+			".ts"
+		],
+		"moduleNameMapper": {
+			"^(\\.{1,2}/.*)\\.js$": "$1"
+		},
+		"transform": {
+			"^.+\\.ts$": [
+				"ts-jest",
+				{
+					"useESM": true
+				}
+			]
+		}
 	},
 	"keywords": [
 		"alfred5",
